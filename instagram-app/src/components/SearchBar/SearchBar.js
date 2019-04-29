@@ -8,7 +8,7 @@ const SearchBar = () => {
         <div className="search-container">
             <div className="logo-imgs">
                 <i className="fab fa-instagram"></i> 
-                <span className="divider"> | </span>
+                
                 <img className="ig-logo" src={logo}/>                
             </div>
             <div>

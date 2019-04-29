@@ -15,18 +15,18 @@
 .ig-logo {    
     margin-top: 25px;
     height: 30px;
+    border-left: 1px solid black;
+    padding-left: 10px;
 }
 
 .logo-imgs i {
-    margin-top: 23px;
-    padding-right: 5px;
+    margin-top: 25px;
+    padding-right: 15px;
     font-size: 30px;
+    
 }
 
-.logo-imgs span {
-    margin-top: 17px;
-    font-size: 30px;
-}
+
 
 input {
     text-align: center;
