@@ -1,19 +1,30 @@
 .search-container {
     display: flex;
-    align-items: flex-start;
+    align-content: center;
     justify-content: space-between;
 }
 
-.iglogo {
-    
+.logo-imgs {
+    display:flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+
+
+.ig-logo {    
+    margin-top: 25px;
     height: 30px;
 }
 
 .logo-imgs i {
+    margin-top: 23px;
+    padding-right: 5px;
     font-size: 30px;
 }
 
 .logo-imgs span {
+    margin-top: 17px;
     font-size: 30px;
 }
 
@@ -24,7 +35,8 @@ input {
     margin: 20px 50px;
     display: flex;
     justify-content: center;
-    border-radius: 2px;
+    border-radius: 3px;
+    border: 1px solid lightgrey;
 }
 
 .social-icons {
