@@ -13,7 +13,7 @@ const SearchBar = () => {
                 
             </div>
             <div>
-                <input type="text" placeholder="Search..." />
+                <input type="text" placeholder="&#x1F50D; Search..." />
             </div>
             <div className="social-icons">
                 <i class="far fa-compass"></i>
