@@ -4,11 +4,13 @@ const Likes = props => {
     return (
         <div className="likes-container">
             <div className="likes-icons">
-                <i className="far fa-heart" onClick={props.addLike} />
+                <div className="heart-icon">
+                    <i className="far fa-heart" onClick={props.addLike} />
+                </div>
                 <i className="far fa-comment" />
             </div>
-            <div className="likes-number">
-                {props.likes}
+            <div className="likes-count">
+                <span>{props.likes} likes</span>
             </div>
         </div>
     );
