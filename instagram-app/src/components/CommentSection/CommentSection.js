@@ -9,19 +9,32 @@ class CommentSection extends React.Component {
         super(props);
         this.state = {
             comments: props.comments,
-            comment: ''
+            commentField: ''
         };
     } 
     
-    
+    handleNewComment = e => {
+        this.setState({
+            commentField: e.target.value
+        })
+    }
 
+    addComment = e => {
+        e.preventDefault();
+
+        const newComments = this.state.comments;
+        newComments.push({text: this.state.commentField, username: 'coriagogo'})
+
+        //Clearing out field
+        this.setState({ comments: newComments, commentField: ''});
+    }
     
 
     render() {
         return (
             <div>
                 {this.state.comments.map((comment, i) => <Comment key={i} comment={comment} />)}                
-                <CommentForm comment={this.state.comment} />
+                <CommentForm onSubmit={this.addComment} onChange={this.handleNewComment} comment={this.state.comment} />
             </div>
         )
     };
