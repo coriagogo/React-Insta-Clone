@@ -12,7 +12,7 @@ const SearchBar = () => {
                 <img className="ig-logo" src={logo}/>                
             </div>
             <div>
-                <input type="text" placeholder="&#x1F50D; Search..." />
+                <input type="text" placeholder="&#x1F50D; Search..."/>
             </div>
             <div className="social-icons">
                 <i className="far fa-compass"></i>
