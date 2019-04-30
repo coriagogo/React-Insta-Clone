@@ -13,22 +13,9 @@ class CommentSection extends React.Component {
         };
     } 
     
-    handleInput = event  => {
-        this.setState({ comment: event.target.value})
-    }
+    
 
-    handleSubmit = event => {
-        event.preventDefault();
-        let newComment = {
-            username: 'coriagogo',
-            text: this.state.comment
-        };
-        this.setState(prevState => {
-            return {
-                comments: [...prevState.comments.newComment]
-            }
-        })
-    };
+    
 
     render() {
         return (
