@@ -16,14 +16,16 @@ class App extends React.Component {
     this.setState({ posts: dummyData});
   }
 
-  
+  handleInput = event  => {
+    this.setState({ comment: event.target.value})
+}
 
   render() {
     
     return (
       <div className="App">
         <SearchBar />
-        <PostContainer posts={this.state.posts} />
+        <PostContainer posts={this.state.posts} handleInput={this.handleInput}/>
         
       </div>
     );
