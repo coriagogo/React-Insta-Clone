@@ -1,0 +1,22 @@
+.post-container {
+    border: 1px solid lightgrey;
+    margin-bottom: 20px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+}
+
+.img-cont {
+    padding: 20px;
+}
+.post-header img {
+    height: 40px;
+    border-radius: 50%;
+    
+}
+
+.user-name {
+    font-weight: bold;
+}
