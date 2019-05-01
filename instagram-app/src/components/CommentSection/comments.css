@@ -20,3 +20,11 @@
     padding-top: 15px;
     border-radius: 0;
 }
+
+.fas.fa-ellipsis-h {
+    font-size: 30px;
+}
+
+.comments button {
+    border: none;
+}

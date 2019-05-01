@@ -25,7 +25,7 @@ class Post extends React.Component {
                     <img className="post-img" src={this.props.post.imageUrl} />
                 </div>                
                 <Likes addLike={this.addLike} likes={this.state.likes} />
-                <CommentSection comments={this.props.post.comments} handleInput={this.props.handleInput} />
+                <CommentSection comments={this.props.post.comments} />
             </div>
         );
     }
