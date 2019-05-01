@@ -1,7 +1,24 @@
 import React from 'react';
 import logo from '../../assets/iglogo.png';
 
+import styled from 'styled-components';
+
 import './searchbar.css';
+
+const LogOut = styled.button`
+    margin-top: 7px;
+    width: 50px;
+    height: 50px;
+    color: #ff6f61;
+    background-color: #ff6f6166;
+    border: 1px solid #ff6f61;
+    border-radius: 50%; 
+
+    &:hover {
+        background-color: #ff6f61;
+        color: white;
+    }
+`
 
 const SearchBar = props => {
     
@@ -23,7 +40,9 @@ const SearchBar = props => {
                 <i className="far fa-heart"></i>
                 <i className="far fa-user-circle"></i>
             </div>
-            <button onClick={onLogOut}>Log Out</button>
+            <LogOut onClick={onLogOut}>Log Out
+            
+            </LogOut>
             
         </div>
     );
@@ -34,5 +53,7 @@ const onLogOut = () => {
     localStorage.removeItem('user');
     window.location.reload();
 };
+
+
 
 export default SearchBar;

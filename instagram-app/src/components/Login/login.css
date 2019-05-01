@@ -1,8 +1,10 @@
 .log-in-page {
-    background-image: url("../../assets/clouds-daylight-heaven-2193239.jpg");
+    height: 600px;
+
 }
 
 .welcome {
+    padding-top: 40px;
     color: #ff6f61;
     font-family: "Helvetica Neue";
     font-size: 30px;

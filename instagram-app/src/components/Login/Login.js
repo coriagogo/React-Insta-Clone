@@ -1,5 +1,8 @@
 import React from 'react';
-import './login.css';
+import './login.css'; 
+import styled from 'styled-components';
+import bg from '../../assets/white-texture.png';
+
 
 class Login extends React.Component {
     constructor(props) {
@@ -22,8 +25,8 @@ class Login extends React.Component {
 
     render() {
         return(
-            
-            <div classname="log-in-page">
+            <Wrapper>
+            <div className="log-in-page">
                 <h4 className="welcome">Welcome to my React Insta Clone!</h4>
                 <div className="log-in-form">
                     <form>
@@ -42,13 +45,23 @@ class Login extends React.Component {
                             value={this.state.password}
                             onChange={this.handleLoginChange}
                         />
-
+                        
                         <button className="log-in-btn" onClick={this.handleLoginSubmit}>Log<br></br>In</button>
                     </form>
                 </div>
             </div>
+            </Wrapper>
+        
         )
     }
 }
+
+const Wrapper = styled.div `
+    background-image: url(${bg});
+    border: #ff6f6166;
+    border-radius: 10px;
+`;
+
+
 
 export default Login;
