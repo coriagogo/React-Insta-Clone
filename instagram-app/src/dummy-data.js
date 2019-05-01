@@ -1,3 +1,5 @@
+import Moment from '../node_modules/moment/moment';
+
 const dummyData = [
     {
       username: "philzcoffee",

@@ -20,3 +20,30 @@
 .user-name {
     font-weight: bold;
 }
+
+.likes-icons {
+    display: flex;
+}
+
+.likes-icons {
+    margin-left: 30px;
+    padding: 10px 0;
+    font-size: 24px;
+}
+
+.heart-icon {
+    padding-right: 20px;
+}
+
+.heart-icon:hover {
+    cursor: pointer;
+    color: #ff6f61;
+    
+}
+
+.likes-count {
+    text-align: left;
+    margin-left: 30px;
+    font-size: 19px;
+}
+
