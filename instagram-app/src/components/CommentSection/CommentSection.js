@@ -25,7 +25,8 @@ class CommentSection extends React.Component {
         const newComments = this.state.comments;
         newComments.push({text: this.state.commentField, username: 'coriagogo'})
 
-        //Clearing out field
+        //Clearing out field 
+        //Be sure to pass commentField to CommentForm
         this.setState({ comments: newComments, commentField: ''});
     }
     
@@ -34,7 +35,7 @@ class CommentSection extends React.Component {
         return (
             <div>
                 {this.state.comments.map((comment, i) => <Comment key={i} comment={comment} />)}                
-                <CommentForm onSubmit={this.addComment} onChange={this.handleNewComment} comment={this.state.comment} />
+                <CommentForm onSubmit={this.addComment} onChange={this.handleNewComment} comment={this.state.comment} commentField={this.state.commentField}/>
             </div>
         )
     };
