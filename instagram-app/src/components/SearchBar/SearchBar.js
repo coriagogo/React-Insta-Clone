@@ -4,7 +4,11 @@ import logo from '../../assets/iglogo.png';
 import './searchbar.css';
 
 const SearchBar = props => {
+    
+
     return (
+        
+    
         <div className="search-container">
             <div className="logo-imgs">
                 <i className="fab fa-instagram"></i> 
@@ -19,9 +23,16 @@ const SearchBar = props => {
                 <i className="far fa-heart"></i>
                 <i className="far fa-user-circle"></i>
             </div>
+            <button onClick={onLogOut}>Log Out</button>
             
         </div>
     );
 }
+
+
+const onLogOut = () => {
+    localStorage.removeItem('user');
+    window.location.reload();
+};
 
 export default SearchBar;

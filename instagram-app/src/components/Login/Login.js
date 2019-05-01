@@ -22,9 +22,9 @@ class Login extends React.Component {
 
     render() {
         return(
-
+            
             <div classname="log-in-page">
-                <h4>Welcome to my React Insta Clone!</h4>
+                <h4 className="welcome">Welcome to my React Insta Clone!</h4>
                 <div className="log-in-form">
                     <form>
                         <input 
@@ -43,7 +43,7 @@ class Login extends React.Component {
                             onChange={this.handleLoginChange}
                         />
 
-                        <button className="log-in-btn" onClick={this.handleLoginSubmit}>Log In</button>
+                        <button className="log-in-btn" onClick={this.handleLoginSubmit}>Log<br></br>In</button>
                     </form>
                 </div>
             </div>
