@@ -6,9 +6,9 @@ import styled from 'styled-components';
 import './searchbar.css';
 
 const LogOut = styled.button`
-    margin-top: 7px;
-    width: 50px;
-    height: 50px;
+    margin-top: 17px;
+    width: 35px;
+    height: 35px;
     color: #ff6f61;
     background-color: #ff6f6166;
     border: 1px solid #ff6f61;
