@@ -27,7 +27,7 @@ class Login extends React.Component {
         return(
             <Wrapper>
             <div className="log-in-page">
-                <h4 className="welcome">Welcome to my React Insta Clone!</h4>
+                <h4 className="welcome">Insta Clone</h4>
                 <div className="log-in-form">
                     <form>
                         <input 
