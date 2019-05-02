@@ -5,13 +5,18 @@ import styled from 'styled-components';
 
 import './searchbar.css';
 
-const SearchContainer = styled.div`
+const Header = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 500px) {
+        max-width: 90%;
+        margin: 0 auto;        
+    }
 `
 
-const LogoImages = styled.div`
+const LogoHeader = styled.div`
     display:flex;
     flex-direction: row;
     align-content: center;    
@@ -111,11 +116,11 @@ const SearchBar = props => {
 
     return (
         
-        <SearchContainer>        
-            <LogoImages>
+        <Header>        
+            <LogoHeader>
                 <i className="fab fa-instagram"></i>                
                 <img className="ig-logo" src={logo}/>                
-            </LogoImages>
+            </LogoHeader>
             <Search>
                 <input type="text" placeholder="&#x1F50D; Search..." onKeyDown={props.searchPosts} />
             </Search>            
@@ -127,7 +132,7 @@ const SearchBar = props => {
                 </div> 
                 <LogOut onClick={onLogOut}><i class="fas fa-sign-out-alt" /></LogOut>
             </SocialIcons>            
-        </SearchContainer>
+        </Header>
     );
 }
 

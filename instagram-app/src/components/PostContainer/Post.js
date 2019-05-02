@@ -2,7 +2,25 @@ import React from 'react';
 import PostHeader from './PostHeader';
 import CommentSection from '../CommentSection/CommentSection';
 import Likes from './Likes';
+import styled from 'styled-components';
 import './postcontainer.css';
+
+const PostContainer = styled.div`
+    border: 1px solid lightgrey;
+    margin-bottom: 20px;
+
+    @media (max-width: 500px) {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+`
+
+const PostImage = styled.img`
+    width: 100%;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    
+`
 
 class Post extends React.Component {
     constructor(props) {
@@ -19,14 +37,12 @@ class Post extends React.Component {
 
     render() {
         return (
-            <div className="post-container">
+            <PostContainer>
                 <PostHeader username={this.props.post.username} thumbnailUrl={this.props.post.thumbnailUrl} />
-                <div className="img-container">
-                    <img className="post-img" src={this.props.post.imageUrl} />
-                </div>                
+                <PostImage src={this.props.post.imageUrl} />                              
                 <Likes addLike={this.addLike} likes={this.state.likes} />
                 <CommentSection comments={this.props.post.comments} />
-            </div>
+            </PostContainer>
         );
     }
 }
