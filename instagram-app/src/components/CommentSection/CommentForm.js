@@ -2,13 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 const CommentsForm = styled.form`
-    width: 90%;
+    width: 90%
     margin: 20px auto;
-    border: none;
-    height: 30px;
+    border: none;    
     text-align: left;
-    font-size: 14px;
-    padding-left: 10px;
+    font-size: 14px;    
     border-top: 1px solid lightgrey;
     padding-top: 15px;
     border-radius: 0;
@@ -16,7 +14,8 @@ const CommentsForm = styled.form`
 
 const CommentInput = styled.input`
     border: none;
-    width: 90%;
+    width: 100%;
+    height: 30px;
 `
 
 const CommentForm = props => {
@@ -28,9 +27,7 @@ const CommentForm = props => {
             value={props.commentField}
             onChange={props.onChange}
             placeholder="Add a comment..." />           
-        </CommentsForm>
-            
-        
+        </CommentsForm>   
     );
 }
 
