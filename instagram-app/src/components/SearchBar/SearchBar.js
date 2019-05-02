@@ -3,7 +3,7 @@ import logo from '../../assets/iglogo.png';
 
 import styled from 'styled-components';
 
-import './searchbar.css';
+
 
 const Header = styled.div`
     display: flex;

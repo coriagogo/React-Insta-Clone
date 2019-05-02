@@ -3,7 +3,7 @@ import PostHeader from './PostHeader';
 import CommentSection from '../CommentSection/CommentSection';
 import Likes from './Likes';
 import styled from 'styled-components';
-import './postcontainer.css';
+
 
 const PostContainer = styled.div`
     border: 1px solid lightgrey;

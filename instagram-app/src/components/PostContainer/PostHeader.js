@@ -1,5 +1,5 @@
 import React from 'react';
-import './postcontainer.css';
+
 import styled from 'styled-components';
 
 
