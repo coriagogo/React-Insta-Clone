@@ -10,7 +10,7 @@ const CommentForm = props => {
                 value={props.commentField}
                 onChange={props.onChange}
                 placeholder="Add a comment..." />                     
-                <button type="submit" onSubmit={props.onSubmit}><i className="fas fa-ellipsis-h" /></button>
+                
             </form>
             
         </div>
