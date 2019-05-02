@@ -5,19 +5,104 @@ import styled from 'styled-components';
 
 import './searchbar.css';
 
+const SearchContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+`
+
+const LogoImages = styled.div`
+    display:flex;
+    flex-direction: row;
+    align-content: center;    
+
+    i {
+        
+        padding-right: 15px;
+        font-size: 30px;
+
+        @media (max-width: 500px) {
+            font-size: 18px;
+            padding-right: 10px;
+        }
+    }
+
+    .ig-logo {
+        
+        height: 30px;
+        border-left: 1px solid black;
+        padding-left: 10px;
+
+        @media (max-width: 500px) {
+            height: 25px;
+            
+        }
+    }
+
+    @media (max-width: 500px) {
+        margin-left: 10px;
+    }
+`
+
+const Search = styled.div`
+
+    input {
+        text-align: center;
+        width: 200px;
+        height: 25px;
+        margin: 20px 50px;
+        display: flex;
+        justify-content: center;
+        border-radius: 3px;
+        border: 1px solid lightgrey;
+
+        @media (max-width: 500px) {
+            width: 150px; 
+            font-size: 12px;
+            margin: 20px;
+        }
+    }
+`
+
+const SocialIcons = styled.div`
+    display: flex;
+
+    .icons {
+        margin-top: 8px;
+
+        i {
+        font-size: 30px;    
+        margin: 0 5px;
+
+            @media (max-width: 500px) {
+                font-size: 15px;     
+                          
+            }
+        }
+
+        @media (max-width: 500px) {
+            margin-top: 2px;
+        }
+    }    
+
+    @media (max-width: 500px) {        
+        margin-top: 0;
+    }
+`
+
 const LogOut = styled.button`
-    margin-top: 17px;
-    width: 35px;
-    height: 35px;
-    color: black;
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 50%; 
-    font-size: 10px;
+    
+    cursor: pointer;
+    font-size: 30px;
+    border: none;
 
     &:hover {
-        background-color: black;
-        color: white;
+        
+        color: #ff6f61;
+    }
+
+    @media (max-width: 500px) {
+        font-size: 18px;       
     }
 `
 
@@ -26,26 +111,23 @@ const SearchBar = props => {
 
     return (
         
-    
-        <div className="search-container">
-            <div className="logo-imgs">
-                <i className="fab fa-instagram"></i> 
-                
+        <SearchContainer>        
+            <LogoImages>
+                <i className="fab fa-instagram"></i>                
                 <img className="ig-logo" src={logo}/>                
-            </div>
-            <div>
+            </LogoImages>
+            <Search>
                 <input type="text" placeholder="&#x1F50D; Search..." onKeyDown={props.searchPosts} />
-            </div>
-            <div className="social-icons">
-                <i className="far fa-compass"></i>
-                <i className="far fa-heart"></i>
-                <i className="far fa-user-circle"></i>
-            </div>
-            <LogOut onClick={onLogOut}>Log Out
-            
-            </LogOut>
-            
-        </div>
+            </Search>            
+            <SocialIcons>
+                <div className="icons">
+                    <i className="far fa-compass"></i>
+                    <i className="far fa-heart"></i>
+                    <i className="far fa-user-circle"></i>         
+                </div> 
+                <LogOut onClick={onLogOut}><i class="fas fa-sign-out-alt" /></LogOut>
+            </SocialIcons>            
+        </SearchContainer>
     );
 }
 
