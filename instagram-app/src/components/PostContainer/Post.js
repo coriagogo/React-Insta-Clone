@@ -12,6 +12,7 @@ const PostContainer = styled.div`
     @media (max-width: 500px) {
         max-width: 90%;
         margin: 0 auto;
+        margin-bottom: 20px;
     }
 `
 
